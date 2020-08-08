@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+     	<meta charset="utf-8">
+	<title>RISING STAR SCHOOL</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> -->
+   </head>
+	
+   <body>
+      <table class="table table-striped">
+	    <thead>
+	    <tr>
+	        <th>Student ID</th>
+	        <th>Student Name</th>
+	        <th>Student Roll_No</th>
+	        <th>Student Class</th>
+	        <th>Date of Birth</th>
+          <th>Mobile No.</th>
+          <th>Address</th>
+	        <th>Action</th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    	{% for item in output_data %}
+	    	<tr>
+	    		<td>{{item['idStudent']}}</td>
+	    		<td>{{item['Student_Name']}}</td>
+	    		<td>{{item['Student_Roll_No']}}</td>
+	    		<td>{{item['Student_Class']}}</td>
+	    		<td>{{item['Date_of_Birth']}}</td>
+          <td>{{item['Mobile_No']}}</td>
+          <td>{{item['Address']}}</td>
+	    		<td><a href="#">Edit</a></td>
+	    	</tr>
+	    	{% endfor %}
+
+	    </tbody>
+	</table>
+
+
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+	</body>
+</html>

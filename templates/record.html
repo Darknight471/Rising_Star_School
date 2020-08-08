@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>Student Data</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <title>Hello, world!</title>
+    <!-- Icons font CSS-->
+    <link href="{{ url_for('static', filename='vendor/mdi-font/css/material-design-iconic-font.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url_for('static', filename='vendor/font-awesome-4.7/css/font-awesome.min.css') }}" rel="stylesheet" media="all">
+        <!-- Font special for pages-->
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <!-- Vendor CSS-->
+    <link href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ url_for('static', filename='vendor/datepicker/daterangepicker.css') }}" rel="stylesheet" media="all">
+    <!-- Main CSS-->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+
+  </head>
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Student Data</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/record" method="post">
+                        <div class="form-row m-b-55">
+                            <div class="name">Student ID</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-3">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type = "text" name = "idStudent" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Student Name</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type = "text" name = "Student_Name" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Student Roll No.</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type = "text" name = "Student_Roll_No" />
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <div class="form-row">
+                            <div class="name">Student Class</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type = "text" name = "Student_Class" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Date of Birth</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <label for="Date_of_Birth"></label>
+                                    <input class="input--style-5" type="date" id="Date_of_Birth" name="Date_of_Birth">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Mobile No.</div>
+                            <div class="value">
+                                    <div class="row-10">
+                                            <input class="input--style-5" type="text" name="Mobile_No">
+                                        </div>
+                                    </div>
+                                </div>
+                        <div class="form-row">
+                            <div class="name">Address</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type = "text" name = "Address" />
+                                </div>
+                            </div>
+                        </div>
+         <div class="text-center">
+                            <button class="btn btn--radius-2 btn--green" type="submit">Register</button>
+        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+   </body>
+	
+</html>
